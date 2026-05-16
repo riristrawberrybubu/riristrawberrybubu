@@ -15,10 +15,7 @@
 
     body {
       font-family: "Comic Sans MS", cursive, sans-serif;
-      background:
-        url('https://www.transparenttextures.com/patterns/stardust.png'),
-        linear-gradient(to bottom, #ffbfd1, #f19aae);
-      background-attachment: fixed;
+      background: linear-gradient(to bottom, #ffbfd1, #f7a5b6);
       color: white;
       overflow-x: hidden;
       min-height: 100vh;
@@ -50,6 +47,18 @@
         opacity: 0;
         transform: scale(0);
       }
+    }
+
+    .fairy-cursor {
+      position: fixed;
+      width: 34px;
+      height: 34px;
+      pointer-events: none;
+      z-index: 10000;
+      font-size: 28px;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(0 0 8px white);
+    }
 
     header {
       background: rgba(177, 55, 79, 0.35);
@@ -84,41 +93,6 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 18px;
-    }
-
-    marquee {
-      color: white;
-      font-size: 1.1rem;
-      padding: 10px 0;
-      text-shadow: 0 0 8px white;
-    }
-
-    .blinkie-bar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .blinkie {
-      background: rgba(255,255,255,0.15);
-      border: 2px ridge #ffd6e7;
-      padding: 8px 14px;
-      border-radius: 12px;
-      font-size: 0.95rem;
-      box-shadow: 0 0 12px rgba(255,255,255,0.25);
-      animation: blinkieGlow 2s infinite alternate;
-    }
-
-    @keyframes blinkieGlow {
-      from {
-        opacity: 0.7;
-      }
-      to {
-        opacity: 1;
-        box-shadow: 0 0 20px white;
-      }
     }
 
     nav a {
@@ -282,24 +256,6 @@
         width: 110px;
       }
     }
-  
-    .music-player {
-      margin-top: 25px;
-      background: rgba(255,255,255,0.12);
-      padding: 18px;
-      border-radius: 20px;
-      border: 2px ridge #ffd6e7;
-      text-align: center;
-      box-shadow: 0 0 18px rgba(255,255,255,0.2);
-    }
-
-    .online-counter {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1rem;
-      text-shadow: 0 0 8px white;
-      animation: blinkieGlow 1.5s infinite alternate;
-    }
   </style>
 </head>
 <body>
@@ -334,17 +290,8 @@
     <h1>✨ In The Fairyhouse ✨</h1>
 
     <p class="subtitle">
-      A dreamy little 2000s cyberfairy corner filled with glitter graphics, strawberry milk vibes, shiny pixels, and magical girl nostalgia.
+      A dreamy little Y2K corner for whimsy, nostalgia, sparkle, and playful magic.
     </p>
-
-    <marquee behavior="alternate" scrollamount="5">✨ welcome to the fairyhouse ✨ strawberry milk ✨ y2k princess zone ✨ online now ✨</marquee>
-
-    <div class="blinkie-bar">
-      <div class="blinkie">🍓 fairycore princess 🍓</div>
-      <div class="blinkie">💿 y2k online 💿</div>
-      <div class="blinkie">🩷 made with glitter 🩷</div>
-      <div class="blinkie">✨ magical girl energy ✨</div>
-    </div>
 
     <nav>
       <a href="#home">In The Fairyhouse</a>
@@ -362,27 +309,18 @@
       <h2>🌸 In The Fairyhouse 🌸</h2>
 
       <p>
-        Welcome to the Strawberry Juice, the escape-webpage of your bubbliest dreams!
+        Welcome to the Fairyhouse, the main page of this dreamy little blogspace!
         Here we celebrate whimsy, nostalgia, softness, internet magic, and playful creativity.
-      
+        This is a sparkly online hideaway inspired by Y2K aesthetics, fairycore dreams,
+        glitter graphics, pink nostalgia, cozy girlhood, and all things magical.
       </p>
 
       <br />
 
       <p>
-        Wander through the different sections to discover poetry, playlists, the cute Whimsigallery,
+        Wander through the different sections to discover poetry, playlists, cute image galleries,
         life updates, inspiration boards, recipes, bucket lists, and more.
         Grab a strawberry milk and stay awhile ✨🍓
-      
-      <div class="music-player">
-        🎵 Now Playing: "Dreamy Girl Internet Anthem" 🎵
-        <br /><br />
-        ⏸️ ◀️ 💿 ▶️ ⏭️
-      </div>
-
-      <div class="online-counter">
-        💖 You are visitor #2003 in the Fairyhouse 💖
-      </div>
       </p>
     </section>
 
@@ -390,7 +328,7 @@
       <h2>🩷 Whimsigallery 🩷</h2>
 
       <p>
-        A cute collection of dreamy images, nostalgic, girly moments,
+        A cute collection of dreamy images, nostalgic aesthetics, fairycore moments,
         and internet treasures. Visitors can also send in photos to be featured here with full credit!
       </p>
 
@@ -445,7 +383,7 @@
     </section>
 
     <section class="card" id="life-inspo">
-      <h2>🎀 Life Inspo </h2>
+      <h2>🎀 Life Inspo 🎀</h2>
 
       <p>
         Pinterest boards, dreamy recipes, bucket lists, aesthetic inspiration,
@@ -464,12 +402,13 @@
       <h2>💖 More Fairy Magic 💖</h2>
 
       <p>
-    <li>🎮 Cute games section</li
+        Extra pages can go here! You could add:
       </p>
 
       <ul>
         <li>💌 Guestbook page</li>
         <li>🌐 Favorite websites</li>
+        <li>🎮 Cute games section</li>
         <li>📷 Polaroid diary</li>
         <li>🧚 About the Fairyhouse</li>
       </ul>
@@ -483,203 +422,30 @@
     <p>Made with glitter, nostalgia, and strawberry milk 🍓</p>
   </footer>
 
-  <script type="text/javascript">
-// <![CDATA[
-var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
-var sparkles=50;
+  <script>
+    const fairyCursor = document.querySelector('.fairy-cursor');
 
-/****************************
-*  Tinkerbell Magic Sparkle *
-*(c)2005-13 mf2fm web-design*
-*  http://www.mf2fm.com/rv  *
-* DON'T EDIT BELOW THIS BOX *
-****************************/
-var x=ox=400;
-var y=oy=300;
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var tiny=new Array();
-var star=new Array();
-var starv=new Array();
-var starx=new Array();
-var stary=new Array();
-var tinyx=new Array();
-var tinyy=new Array();
-var tinyv=new Array();
+    document.addEventListener('mousemove', (e) => {
+      fairyCursor.style.left = e.clientX + 'px';
+      fairyCursor.style.top = e.clientY + 'px';
 
-window.onload=function() { if (document.getElementById) {
-  var i, rats, rlef, rdow;
-  for (var i=0; i<sparkles; i++) {
-    var rats=createDiv(3, 3);
-    rats.style.visibility="hidden";
-    rats.style.zIndex="999";
-    document.body.appendChild(tiny[i]=rats);
-    starv[i]=0;
-    tinyv[i]=0;
-    var rats=createDiv(5, 5);
-    rats.style.backgroundColor="transparent";
-    rats.style.visibility="hidden";
-    rats.style.zIndex="999";
-    var rlef=createDiv(1, 5);
-    var rdow=createDiv(5, 1);
-    rats.appendChild(rlef);
-    rats.appendChild(rdow);
-    rlef.style.top="2px";
-    rlef.style.left="0px";
-    rdow.style.top="0px";
-    rdow.style.left="2px";
-    document.body.appendChild(star[i]=rats);
-  }
-  set_width();
-  sparkle();
-}}
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
 
-function sparkle() {
-  var c;
-  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
-    ox=x;
-    oy=y;
-    for (c=0; c<sparkles; c++) if (!starv[c]) {
-      star[c].style.left=(starx[c]=x)+"px";
-      star[c].style.top=(stary[c]=y+1)+"px";
-      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
-      star[c].style.visibility="visible";
-      starv[c]=50;
-      break;
-    }
-  }
-  for (c=0; c<sparkles; c++) {
-    if (starv[c]) update_star(c);
-    if (tinyv[c]) update_tiny(c);
-  }
-  setTimeout("sparkle()", 40);
-}
+      sparkle.style.left = e.clientX + 'px';
+      sparkle.style.top = e.clientY + 'px';
 
-function update_star(i) {
-  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-  if (starv[i]) {
-    stary[i]+=1+Math.random()*3;
-    starx[i]+=(i%5-2)/5;
-    if (stary[i]<shigh+sdown) {
-      star[i].style.top=stary[i]+"px";
-      star[i].style.left=starx[i]+"px";
-    }
-    else {
-      star[i].style.visibility="hidden";
-      starv[i]=0;
-      return;
-    }
-  }
-  else {
-    tinyv[i]=50;
-    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-    tiny[i].style.width="2px";
-    tiny[i].style.height="2px";
-    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
-    star[i].style.visibility="hidden";
-    tiny[i].style.visibility="visible"
-  }
-}
+      const size = Math.random() * 8 + 4;
+      sparkle.style.width = size + 'px';
+      sparkle.style.height = size + 'px';
 
-function update_tiny(i) {
-  if (--tinyv[i]==25) {
-    tiny[i].style.width="1px";
-    tiny[i].style.height="1px";
-  }
-  if (tinyv[i]) {
-    tinyy[i]+=1+Math.random()*3;
-    tinyx[i]+=(i%5-2)/5;
-    if (tinyy[i]<shigh+sdown) {
-      tiny[i].style.top=tinyy[i]+"px";
-      tiny[i].style.left=tinyx[i]+"px";
-    }
-    else {
-      tiny[i].style.visibility="hidden";
-      tinyv[i]=0;
-      return;
-    }
-  }
-  else tiny[i].style.visibility="hidden";
-}
+      document.body.appendChild(sparkle);
 
-document.onmousemove=mouse;
-function mouse(e) {
-  if (e) {
-    y=e.pageY;
-    x=e.pageX;
-  }
-  else {
-    set_scroll();
-    y=event.y+sdown;
-    x=event.x+sleft;
-  }
-}
-
-window.onscroll=set_scroll;
-function set_scroll() {
-  if (typeof(self.pageYOffset)=='number') {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-    sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
-  }
-}
-
-window.onresize=set_width;
-function set_width() {
-  var sw_min=999999;
-  var sh_min=999999;
-  if (document.documentElement && document.documentElement.clientWidth) {
-    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-  }
-  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-  }
-  if (document.body.clientWidth) {
-    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-  }
-  if (sw_min==999999 || sh_min==999999) {
-    sw_min=800;
-    sh_min=600;
-  }
-  swide=sw_min;
-  shigh=sh_min;
-}
-
-function createDiv(height, width) {
-  var div=document.createElement("div");
-  div.style.position="absolute";
-  div.style.height=height+"px";
-  div.style.width=width+"px";
-  div.style.overflow="hidden";
-  return (div);
-}
-
-function newColour() {
-  var c=new Array();
-  c[0]=255;
-  c[1]=Math.floor(Math.random()*256);
-  c[2]=Math.floor(Math.random()*(256-c[1]/2));
-  c.sort(function(){return (0.5 - Math.random());});
-  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
-}
-// ]]>
+      setTimeout(() => {
+        sparkle.remove();
+      }, 1000);
+    });
+  </script>
 
 </body>
 </html>
